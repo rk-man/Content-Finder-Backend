@@ -22,3 +22,10 @@ The Backend side of the application which is headless and built using Python Dja
     ```
 
 5. Finally, `python manage.py runserver` to run the application
+
+6. Create a stripe account and you will have a public key and a secret key. Copy both and paste it in the env files repectively
+
+### FOR THE ENV FILES
+
+-   create a .env file in the settings.py folder
+-   add FRONTEND_URL (holds frontend url), BACKEND_URL (holds backend url), STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY
