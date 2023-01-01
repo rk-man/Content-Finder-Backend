@@ -8,8 +8,6 @@ from django.dispatch import receiver
 from django.utils import timezone
 # Create your models here.
 
-from cloudinary_storage.storage import RawMediaCloudinaryStorage
-
 
 class Profile(models.Model):
     user = models.OneToOneField(

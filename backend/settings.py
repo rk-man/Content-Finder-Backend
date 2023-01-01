@@ -10,9 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 import os
 import environ
 from pathlib import Path
@@ -61,8 +58,6 @@ INSTALLED_APPS = [
     "corsheaders",
 
     # cloudinary
-    "cloudinary",
-    "cloudinary_storage"
 ]
 
 REST_FRAMEWORK = {
@@ -200,7 +195,6 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = "/media/"
 #
-# DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static"
@@ -221,10 +215,3 @@ FRONTEND_URL = env("FRONTEND_URL")
 STRIPE_PUBLIC_KEY = env("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
 STRIPE_WEBHOOK_SECRET = env("STRIPE_WEBHOOK_SECRET")
-
-# CONFIG CLOUDINARY
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": env("CLOUDINARY_NAME"),
-    "API_KEY": env("CLOUDINARY_API_KEY"),
-    "API_SECRET": env("CLOUDINARY_API_SECRET")
-}
